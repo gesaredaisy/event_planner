@@ -60,10 +60,10 @@ public class BudgetList extends Fragment {
         });
 
         //Background animation
-        AnimationDrawable animationDrawable = (AnimationDrawable) view.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();
+//        AnimationDrawable animationDrawable = (AnimationDrawable) view.getBackground();
+//        animationDrawable.setEnterFadeDuration(2000);
+//        animationDrawable.setExitFadeDuration(4000);
+//        animationDrawable.start();
 
 
         add_budget_button.setOnClickListener(new View.OnClickListener() {

@@ -5,9 +5,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_logonew"
+        android:icon="@mipmap/event_planner"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_logonew"
+        android:roundIcon="@mipmap/event_planner"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
