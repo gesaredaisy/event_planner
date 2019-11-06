@@ -51,14 +51,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_BUDGET_PAID = "PAID";
     public static final String COL_BUDGET_NOTE = "NOTES";
 
-    //SHOPPING Table column names
-    public static final String COL_SHOPPING_ITEM = "ITEMNAME";
-    public static final String COL_SHOPPING_EVENT = "SHOPPINGEVENT";
-    public static final String COL_SHOPPING_PURCHASED = "PURCHASED";
-    public static final String COL_PRICE = "PRICE";
-    public static final String COL_UNITS = "UNITS";
-    public static final String COL_QUANTITYMODE = "QUANTITYMODE";
-
+//    //SHOPPING Table column names
+//    public static final String COL_SHOPPING_ITEM = "ITEMNAME";
+//    public static final String COL_SHOPPING_EVENT = "SHOPPINGEVENT";
+//    public static final String COL_SHOPPING_PURCHASED = "PURCHASED";
+//    public static final String COL_PRICE = "PRICE";
+//    public static final String COL_UNITS = "UNITS";
+//    public static final String COL_QUANTITYMODE = "QUANTITYMODE";
+//
 
 
 
@@ -77,7 +77,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("create table " + TABLE_EVENT +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,EVENTNAME TEXT,EVENTLOCATION TEXT,EVENTDATE TEXT,EVENTNOTE TEXT)");
         db.execSQL("create table " + TABLE_GUEST +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,GUESTNAME TEXT,GUESTAGE TEXT,GUESTEMAIL TEXT,GUESTGENDER TEXT, GUESTNOTE TEXT, GUESTEVENT TEXT, GUESTSTATUS TEXT)");
-        db.execSQL("create table " + TABLE_SHOPPING +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,ITEMNAME TEXT,SHOPPINGEVENT TEXT,PURCHASED TEXT,PRICE TEXT, UNITS TEXT, QUANTITYMODE TEXT, NOTES TEXT)");
+       // db.execSQL("create table " + TABLE_SHOPPING +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,ITEMNAME TEXT,SHOPPINGEVENT TEXT,PURCHASED TEXT,PRICE TEXT, UNITS TEXT, QUANTITYMODE TEXT, NOTES TEXT)");
     }
 
     //if the table exits delete them

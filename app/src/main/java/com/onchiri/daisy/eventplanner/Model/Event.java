@@ -1,9 +1,5 @@
 package com.onchiri.daisy.eventplanner.Model;
 
-/**
- * Created by inushaV on 9/8/2019.
- */
-
 public class Event {
 
     public int id;

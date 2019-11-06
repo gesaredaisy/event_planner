@@ -35,6 +35,7 @@ public class BudgetList extends Fragment {
 
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,6 +50,8 @@ public class BudgetList extends Fragment {
         deletebudgetet = view.findViewById(R.id.editText_deletebudget);
 
 
+
+
         getActivity().setTitle("Budget");
 
         deleteBudget.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +61,7 @@ public class BudgetList extends Fragment {
 
             }
         });
+
 
         //Background animation
 //        AnimationDrawable animationDrawable = (AnimationDrawable) view.getBackground();

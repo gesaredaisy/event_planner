@@ -23,11 +23,6 @@ import com.onchiri.daisy.eventplanner.Service.DatabaseHelper;
 
 import java.util.Calendar;
 
-
-/**
- * Created by inushaV on 8/31/2019.
- */
-
 public class CreateEvent extends Fragment implements
         DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener{
 
@@ -137,6 +132,7 @@ public class CreateEvent extends Fragment implements
         TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), CreateEvent.this,
                 hour, minute, DateFormat.is24HourFormat(getActivity()));
         timePickerDialog.show();
+
     }
 
     @Override

@@ -19,9 +19,6 @@ import android.widget.Toast;
 
 import com.onchiri.daisy.eventplanner.Service.DatabaseHelper;
 
-/**
- * Created by inushaV on 8/31/2019.
- */
 
 public class EventFragment extends Fragment {
 
