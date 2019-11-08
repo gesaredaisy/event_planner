@@ -103,8 +103,9 @@ public class AddBudget extends Fragment {
                     Budget budget = new Budget();
                     budget.setEvent(spinnerEvent.getSelectedItem().toString());
                     budget.setBudgetItem(budgetItem.getText().toString());
+                    //budget.setBudgetItem((String.copyValueOf(budgetItem.getText().toString())));
                     budget.setAmount((Integer.parseInt(amount.getText().toString())));
-                   budget.setPaid(Integer.parseInt(paidAmount.getText().toString()));
+                   budget.setPaidAmount(Integer.parseInt(paidAmount.getText().toString()));
                     budget.setNote(budgetnotes.getText().toString());
 
 

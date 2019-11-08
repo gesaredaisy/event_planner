@@ -4,7 +4,7 @@ public class Budget {
 
     String event;
     int amount;
-    int paid;
+    int paidAmount;
     String note;
     String budgetItem;
 
@@ -24,12 +24,12 @@ public class Budget {
         this.amount = amount;
     }
 
-    public int getPaid() {
-        return paid;
+    public int getPaidAmount() {
+        return paidAmount;
     }
 
-    public void setPaid(int paid) {
-        this.paid = paid;
+    public void setPaidAmount(int paid) {
+        this.paidAmount = paid;
     }
 
     public String getNote() {

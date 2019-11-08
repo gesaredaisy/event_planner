@@ -28,7 +28,8 @@
         android:background="#DAA520"
         android:text="@string/search_button"
         app:layout_constraintStart_toEndOf="@+id/budgetSearch"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
 
     <ImageButton
         android:id="@+id/budgetadd"

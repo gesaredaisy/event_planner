@@ -63,14 +63,34 @@ public class CreateEvent extends Fragment implements
         date_pick_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Calendar c = Calendar.getInstance();
-                year = c.get(Calendar.YEAR);
-                month = c.get(Calendar.MONTH);
-                day = c.get(Calendar.DAY_OF_MONTH);
+
+                final Calendar calendarMax = Calendar.getInstance();
+                calendarMax.add(Calendar.DAY_OF_MONTH, 90);
+
+                final Calendar calendarToday = Calendar.getInstance();
+                int year = calendarToday.get(Calendar.YEAR);
+                int month = calendarToday.get(Calendar.MONTH);
+                calendarToday.add(Calendar.DAY_OF_MONTH, 1);
+                int day = calendarToday.get(Calendar.DAY_OF_MONTH);
+
 
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), CreateEvent.this,
                         year, month, day);
+                datePickerDialog.getDatePicker().setMinDate(calendarToday.getTimeInMillis());
+                datePickerDialog.getDatePicker().setMaxDate(calendarMax.getTimeInMillis());
                 datePickerDialog.show();
+
+
+
+
+//                Calendar c = Calendar.getInstance();
+//                year = c.get(Calendar.YEAR);
+//                month = c.get(Calendar.MONTH);
+//                day = c.get(Calendar.DAY_OF_MONTH);
+//
+//                DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), CreateEvent.this,
+//                        year, month, day);
+//                datePickerDialog.show();
             }
         });
 

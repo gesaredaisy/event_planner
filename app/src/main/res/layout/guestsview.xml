@@ -9,7 +9,7 @@
 
 
     <SearchView
-        android:id="@+id/budgetSearch"
+        android:id="@+id/guestSearch"
         android:layout_width="200dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/budget_search"
+        android:id="@+id/guest_search"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -27,11 +27,12 @@
         android:layout_marginTop="32dp"
         android:background="#DAA520"
         android:text="@string/search_button"
-        app:layout_constraintStart_toEndOf="@+id/budgetSearch"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/guestSearch"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
 
     <ImageButton
-        android:id="@+id/budgetadd"
+        android:id="@+id/guestadd"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -41,7 +42,7 @@
         android:layout_marginRight="16dp"
         android:background="#000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/budget_search"
+        app:layout_constraintStart_toEndOf="@+id/guest_search"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="contentDescription" />
@@ -60,8 +61,9 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/spinner_event_view"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/budgetSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/guestSearch" />
 
     <TextView
         android:id="@+id/textView13"
@@ -75,7 +77,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/spinner_status"
-        app:layout_constraintTop_toBottomOf="@+id/budget_search" />
+        app:layout_constraintTop_toBottomOf="@+id/guest_search" />
 
     <Spinner
         android:id="@+id/spinner_event_view"
@@ -85,7 +87,8 @@
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         app:layout_constraintEnd_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/budgetSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/guestSearch"
+        tools:ignore="UnknownId" />
 
     <Spinner
         android:id="@+id/spinner_status"
@@ -96,7 +99,7 @@
         android:layout_marginRight="8dp"
         android:entries="@array/status_array"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/budgetadd" />
+        app:layout_constraintTop_toBottomOf="@+id/guestadd" />
 
 
     <ScrollView
@@ -135,7 +138,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/deleteBudgetButton"
+        android:id="@+id/deleteGuestButton"
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -147,12 +150,13 @@
         android:textStyle="bold"
         android:textColor="@color/colorwhite"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/edit_budget_button"
+        app:layout_constraintEnd_toStartOf="@+id/edit_guest_button"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.086"
+        tools:ignore="UnknownId" />
 
     <EditText
-        android:id="@+id/editText_deletebudget"
+        android:id="@+id/editText_deleteguest"
         android:layout_width="97dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -162,13 +166,13 @@
         android:ems="10"
         android:hint="Guest ID"
         android:inputType="textPersonName|number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/deleteBudgetButton"
-        app:layout_constraintEnd_toStartOf="@+id/deleteBudgetButton"
+        app:layout_constraintBaseline_toBaselineOf="@+id/deleteGuestButton"
+        app:layout_constraintEnd_toStartOf="@+id/deleteGuestButton"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/edit_budget_button"
+        android:id="@+id/edit_guest_button"
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -211,7 +215,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_deletebudget" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_deleteguest" />
 
         <TextView
             android:id="@+id/amount_display"
@@ -227,7 +231,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/editText_deletebudget" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_deleteguest" />
 
         <TextView
             android:id="@+id/textView16"
@@ -247,7 +251,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/paid_display"
             app:layout_constraintStart_toEndOf="@+id/amount_display"
-            app:layout_constraintTop_toBottomOf="@+id/deleteBudgetButton" />
+            app:layout_constraintTop_toBottomOf="@+id/deleteGuestButton" />
 
         <TextView
             android:id="@+id/paid_display"
@@ -263,7 +267,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView18"
-            app:layout_constraintTop_toBottomOf="@+id/deleteBudgetButton" />
+            app:layout_constraintTop_toBottomOf="@+id/deleteGuestButton" />
 
         <TextView
             android:id="@+id/textView18"
@@ -280,7 +284,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/due_display"
-            app:layout_constraintTop_toBottomOf="@+id/edit_budget_button" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_guest_button" />
 
         <TextView
             android:id="@+id/due_display"
@@ -296,7 +300,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_budget_button" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_guest_button" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

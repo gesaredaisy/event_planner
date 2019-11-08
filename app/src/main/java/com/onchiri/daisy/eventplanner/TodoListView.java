@@ -20,7 +20,6 @@ public class TodoListView extends Fragment {
 
     Button btn_viewTodos;
     DatabaseHelper mydb;
-
     ImageButton btn_update_todolist,btn_delete_todolist;
 
     @Override
@@ -91,5 +90,7 @@ public class TodoListView extends Fragment {
         builder.setMessage(message);
         builder.show();
     }
+
+
 
 }

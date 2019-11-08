@@ -139,6 +139,7 @@ public class AddGuest extends Fragment{
                     guest.setEventName(spinnerEvent.getSelectedItem().toString());
                     guest.setGuestName(editTextGuestName.getText().toString());
                     guest.setGuestEmail(editTextEmail.getText().toString());
+                    String emailRegistration = "[a-zA-Z0-9._-]+@[a-z]+.+[a-z]+";
                     guest.setGuestGender(spinnerGender.getSelectedItem().toString());
                     guest.setAge(spinnerAge.getSelectedItem().toString());
                     guest.setNotesGuest(editTextNote.getText().toString());
@@ -146,14 +147,30 @@ public class AddGuest extends Fragment{
 
                     //Print data in the console
                     System.out.println("Insert Guest Data = " + editTextGuestName.getText().toString() +","+ editTextEmail.getText().toString() +","+  spinnerAge.toString() +","+ editTextNote.getText().toString());
+                    if (emailRegistration.matches("[a-zA-Z0-9._-]+@[a-z]+.+[a-z]+"))
+                    {
+                        editTextEmail.setError("Invalid Email Address");
 
-                    boolean isInserted = mydb.insertGuestData(guest);
-                    if (isInserted = true)
-                        Toast.makeText(getActivity(),"Data Inserted Successfully..",Toast.LENGTH_LONG).show();
-                    else
-                        Toast.makeText(getActivity(),"Data Inserted Error ..",Toast.LENGTH_LONG).show();
+                    }else if (editTextGuestName.getText().toString().length() <= 0 || editTextEmail.getText().toString().length() <= 0 || editTextNote.getText().toString().length() <= 0)
+                    {
+                        Toast.makeText(getActivity(),"Kindly insert data...",Toast.LENGTH_LONG).show();
+                    } else
+                        {
+                            boolean isInserted = mydb.insertGuestData(guest);
+                            if (isInserted = true)
+                            {
+                                Toast.makeText(getActivity(),"Data Inserted Successfully..",Toast.LENGTH_LONG).show();
+                                editTextNote.setText("");
+                                editTextGuestName.setText("");
+                                editTextEmail.setText("");
+                            }
 
-                    openEventFragment();
+                            else{
+                                Toast.makeText(getActivity(),"Data Inserted Error ..",Toast.LENGTH_LONG).show();
+                                openEventFragment();
+                            }
+
+                        }
 
 
                 } catch (Exception e) {

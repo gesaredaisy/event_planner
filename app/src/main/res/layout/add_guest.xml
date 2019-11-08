@@ -202,7 +202,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="33dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
 
     <EditText
         android:id="@+id/guestAge"
@@ -213,7 +214,8 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
 
-        tools:layout_editor_absoluteY="73dp" />
+        tools:layout_editor_absoluteY="73dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/guestNotes"
@@ -222,7 +224,8 @@
 
         android:ems="10"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner_age"

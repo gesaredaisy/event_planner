@@ -44,11 +44,11 @@ public class GuestsView extends Fragment  {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(guestsview, container, false);
         txt_display = view.findViewById(R.id.txt_display);
-       deleteId = view.findViewById(id.editText_deletebudget);
-       deletebtn = view.findViewById(id.deleteBudgetButton);
+       deleteId = view.findViewById(id.editText_deleteguest);
+       deletebtn = view.findViewById(id.deleteGuestButton);
        spinnerEvent = view.findViewById(id.spinner_event_view);
-       guestSearch = view.findViewById(id.budgetSearch);
-       searchbtn = view.findViewById(id.budget_search);
+       guestSearch = view.findViewById(id.guestSearch);
+       searchbtn = view.findViewById(id.guest_search);
        total_display = view.findViewById(R.id.due_display);
         female_display = view.findViewById(R.id.amount_display);
         male_display = view.findViewById(id.paid_display);
@@ -80,7 +80,7 @@ public class GuestsView extends Fragment  {
         getActivity().setTitle("Guests");
 
 
-        ImageButton guestAdd = (ImageButton)view.findViewById(id.budgetadd);
+        ImageButton guestAdd = (ImageButton)view.findViewById(id.guestadd);
         guestAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
@@ -127,17 +127,21 @@ public class GuestsView extends Fragment  {
 
         DatabaseHelper db = new DatabaseHelper(getActivity());
         SQLiteDatabase mydb = db.getWritableDatabase();
+                if(deleteId.length() <= 0)
+                {
+                    Toast.makeText(getActivity(), "Enter Id", Toast.LENGTH_LONG).show();
 
-        int id = Integer.parseInt(deleteId.getText().toString());
+                }
+                else
+                    {
+                        int id = Integer.parseInt(deleteId.getText().toString());
+                        db.deleteGuests(id,mydb);
+                        db.close();
+                        deleteId.setText("");
+                        openGuestFragment();
+                        Toast.makeText(getActivity(),"Guest removed successfully", Toast.LENGTH_SHORT).show();
+                    }
 
-        if (deleteId == null) {
-            Toast.makeText(getActivity(), "Enter valid id", Toast.LENGTH_LONG).show();
-        }
-        db.deleteGuests(id,mydb);
-        db.close();
-        deleteId.setText("");
-        openGuestFragment();
-        Toast.makeText(getActivity(),"Guest removed successfully", Toast.LENGTH_SHORT).show();
     }
 
     public void openGuestFragment(){

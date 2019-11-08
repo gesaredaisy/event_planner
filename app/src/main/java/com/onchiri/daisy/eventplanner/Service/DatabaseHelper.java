@@ -196,7 +196,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_BUDGET_ITEM,budget.getBudgetItem());
         contentValues.put(COL_BUDGET_EVENT,budget.getEvent());
         contentValues.put(COL_BUDGET_AMOUNT,budget.getAmount());
-        contentValues.put(COL_BUDGET_PAID,budget.getPaid());
+        contentValues.put(COL_BUDGET_PAID,budget.getPaidAmount());
         contentValues.put(COL_BUDGET_NOTE,budget.getNote());
 
 

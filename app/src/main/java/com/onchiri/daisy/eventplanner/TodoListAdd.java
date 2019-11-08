@@ -62,6 +62,7 @@ public class TodoListAdd extends Fragment {
                     todos.setTask(addTodos.getText().toString());
                     todos.setNotes(addNotes.getText().toString());
 
+
                     //Print data in the console
                     System.out.println("Insert Guest Data = " + addTodos.getText().toString() +","+ addNotes.getText().toString() );
 
